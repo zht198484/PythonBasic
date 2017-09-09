@@ -12,7 +12,7 @@ for i in seq:
 print type(seq[0])
 print type(seq[1])
 
-seq.insert(1, ['a1', 'b1'])
+seq.insert(1, ['a1', ['b2','c2']])
 
 print seq
 for i in seq:
@@ -21,11 +21,11 @@ for i in seq:
 print isinstance(seq, list)
 
 
-def print_seq(the_seq):
+def print_seq(the_seq, level):
     for i in the_seq:
         if isinstance(i, list):
-            print_seq(i)
+            print_seq(i, level+1)
         else:
-            print i
+            print '\t'*level, i
 
-print_seq(seq);
+print_seq(seq, 0)
