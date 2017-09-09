@@ -21,11 +21,12 @@ for i in seq:
 print isinstance(seq, list)
 
 
-def print_seq(the_seq, level):
+def print_seq(the_seq, level=0):
     for i in the_seq:
         if isinstance(i, list):
             print_seq(i, level+1)
         else:
             print '\t'*level, i
 
-print_seq(seq, 0)
+
+print_seq(seq)
