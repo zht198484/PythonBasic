@@ -28,6 +28,8 @@ try:
         print 'Load data from {}'.format(fp)
         load = pickle.load(fp)
         print load
+        print 'the first element is ', load[0]
+        print 'the last element is ', load[-1]
 except IOError as err:
     print 'Fail to open 111.pickle in rb mode', str(err)
 except pickle.PickleError as err:
