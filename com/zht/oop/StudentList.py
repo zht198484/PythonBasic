@@ -15,3 +15,4 @@ student = StudentList('a', 5, [StudentList('b', 6), StudentList('b', 10), Studen
 oldest_classmate, flag = student.oldest3classmate()
 print oldest_classmate
 print flag
+print ','.join([str(i) for i in oldest_classmate])
