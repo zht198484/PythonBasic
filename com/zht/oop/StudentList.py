@@ -8,8 +8,10 @@ class StudentList(list):
         self.extend(classmates)
 
     def oldest3classmate(self):
-        return sorted([stu.age for stu in self], reverse=True)[0:3]
+        return sorted([stu.age for stu in self], reverse=True)[0:3], True
 
 
 student = StudentList('a', 5, [StudentList('b', 6), StudentList('b', 10), StudentList('c', 8), StudentList('d', 9)])
-print student.oldest3classmate()
+oldest_classmate, flag = student.oldest3classmate()
+print oldest_classmate
+print flag
