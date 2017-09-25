@@ -25,6 +25,8 @@ class D1(A1):
         print("Leave D")
 
 
+# super always and may only be used in __init__ method
+# try your best to avoid using multiple inheritance
 class E1(B1, C1, D1):
     def __init__(self):
         print("Enter E")
